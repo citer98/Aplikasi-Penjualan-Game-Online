@@ -1,10 +1,9 @@
-public interface Pemesanan {
-    cint opsi;
+public interface User{
+
 
     void ShowGameList();
     void AddToCart();
     void RemoveFromCart();
     void CheckOut();
-    void Exit();
 
 }
