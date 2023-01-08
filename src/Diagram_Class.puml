@@ -1,0 +1,33 @@
+@startuml
+
+class Aplikasi{
+    -int total
+    -int aa
+    -int bb
+    -int cc
+    +Buy()
+    +Cancel_Buy()
+    +Pay()
+}
+
+Interface User {
+  +ShowGameList()
+  +AddToCart()
+  +RemoveFromCart()
+  +CheckOut()
+}
+
+class Buyer  {
+  -User : user
+  +Show Game List()
+  +Add To Cart()
+  +Remove From Cart()
+  +Check Out()
+}
+
+
+
+User <|.. Buyer : implements
+User <-- Aplikasi
+
+@enduml
