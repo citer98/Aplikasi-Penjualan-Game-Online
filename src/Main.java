@@ -46,7 +46,7 @@ public class Main {
 
             else if (aksi.equalsIgnoreCase("5"))
             {
-                System.out.println("Terima Kasih\n");
+                System.out.println("\nTerima Kasih");
                 System.exit(0);
             }
             else
