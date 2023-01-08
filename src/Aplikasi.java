@@ -4,7 +4,6 @@ public class Aplikasi implements User{
 
     int total = 0;
     int aa = 25000,bb = 70000 ,cc = 30000;
-    private boolean isAdded;
 
     @Override
     public void ShowGameList()
