@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Aplikasi implements User{
 
     int total = 0;
@@ -156,11 +155,22 @@ public class Aplikasi implements User{
         if (remove==101)
         {
             total=total-aa;
-            if (total<=0)
+            if (remove==101 && total==45000) //bb=70.000
             {
                 System.out.println("\nGame 'Half Life 2 : Episode 3' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+aa;
             }
-            else if (remove==101 && total==75000) //bb cc
+            else if (remove==101 && total==5000) //cc=30.000
+            {
+                System.out.println("\nGame 'Half Life 2 : Episode 3' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+aa;
+            }
+            else if (remove==101 && total==75000) //bb+cc=100.000
+            {
+                System.out.println("\nGame 'Half Life 2 : Episode 3' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+aa;
+            }
+            else if (total<0)
             {
                 System.out.println("\nGame 'Half Life 2 : Episode 3' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
                 total=total+aa;
@@ -174,9 +184,25 @@ public class Aplikasi implements User{
         else if (remove==202)
         {
             total=total-bb;
-            if (total<=0)
+            if (remove==202 && total==-45000) //aa=25.000
             {
                 System.out.println("\nGame 'Minecraft' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+bb;
+            }
+            else if (remove==202 && total==-40000) //cc=30.000
+            {
+                System.out.println("\nGame 'Minecraft' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+bb;
+            }
+            else if (remove==202 && total==-15000) //aa+cc=55.000
+            {
+                System.out.println("\nGame 'Minecraft' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+bb;
+            }
+            else if (total<0)
+            {
+                System.out.println("\nGame 'Minecraft' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+bb;
             }
             else
             {
@@ -187,11 +213,22 @@ public class Aplikasi implements User{
         else if (remove==303)
         {
             total=total-cc;
-            if (total<=0)
+            if (remove==303 && total==-5000) //aa=25.000
             {
                 System.out.println("\nGame 'Hollow Knight' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+cc;
             }
-            else if (remove==303 && total==65000) //aa bb
+            else if (remove==303 && total==40000) //bb=70.000
+            {
+                System.out.println("\nGame 'Hollow Knight' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+cc;
+            }
+            else if (remove==303 && total==65000) //aa+bb=95.000
+            {
+                System.out.println("\nGame 'Hollow Knight' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
+                total=total+cc;
+            }
+            else if (total<0)
             {
                 System.out.println("\nGame 'Hollow Knight' Belum Ditambahkan Ke Dalam Keranjang!!!\n");
                 total=total+cc;
@@ -210,13 +247,7 @@ public class Aplikasi implements User{
     @Override
     public void CheckOut()
     {
-        if (total<=0)
-        {
-            System.out.println("\nMaaf Tapi Keranjang Anda Masih Kosong");
-            total=0;
-            System.out.println("Total : Masih "+total+"\n");
-        }
-        else
+        if (total>0)
         {
             System.out.println("");
             System.out.println("===================================");
@@ -306,6 +337,12 @@ public class Aplikasi implements User{
                 System.out.println("| Total : "+total+"                  |");
                 System.out.println("===================================\n");
             }
+        }
+        else if (total==0)
+        {
+            System.out.println("\nMaaf Tapi Keranjang Anda Masih Kosong");
+            total=0;
+            System.out.println("Total : Masih "+total+"\n");
         }
 
     }
